@@ -2,7 +2,10 @@
 ** 'ONESHOT' FUNCTIONS
 - play n
   - ops: attack / release
+
 - sleep n
+
+// watch out for the position of the colons ":" on this one!
 - sample :foo
   - ops: rate
 
