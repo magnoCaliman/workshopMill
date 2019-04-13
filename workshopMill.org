@@ -112,8 +112,6 @@ loop do
 end
 #+END_SRC
 
-** SETUP/DRAW
-
 * RANDOMIZATION
 
 - rrand(x, y)
