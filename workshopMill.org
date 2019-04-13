@@ -1,0 +1,192 @@
+* FUNCTIONS & PARAMETERS
+** 'ONESHOT' FUNCTIONS
+- play n
+  - ops: attack / release
+- sleep n
+- sample :foo
+  - ops: rate
+
+#+BEGIN_SRC ruby
+  sample :ambi_glass_hum
+  play 64, release: 1.8
+  sleep 0.1
+  play 63, release: 2
+  play 62, release: 3
+  sleep 2
+  sample :ambi_haunted_hum, rate: 0.5
+  play 90, attack: 4, release: 6
+  sleep 2
+  play 88, attack: 4, release: 4
+#+END_SRC
+
+** GLOBAL BEHAVIOUR CHANGING FUNCTIONS
+- use_synth
+  - synth specific parameters
+- use_synth_defaults
+
+#+BEGIN_SRC ruby
+use_synth :fm
+play 67, release: 6, depth: 100, amp: 0.8
+
+use_synth :dsaw
+use_synth_defaults release: 5, detune: 0.2
+
+play 67
+play 70
+play 74
+
+sleep 5
+
+use_synth :prophet
+use_synth_defaults release: 0.2
+
+play 67
+sleep 0.2
+play 70
+sleep 0.2
+play 74
+sleep 0.2
+play 67
+play 70
+play 74
+#+END_SRC
+
+* BLOCKS
+** LOOP DO/END
+
+- loop do/end
+  - no stoping! good for layering...
+
+#+BEGIN_SRC ruby
+loop do
+  sample :bd_fat
+  sleep 1
+end
+#+END_SRC
+
+** x.TIMES DO/END
+
+- x.times do/end
+#+BEGIN_SRC ruby
+8.times do
+  sample :drum_cymbal_closed
+  sleep 0.1
+end
+
+4.times do
+  sample :drum_cymbal_open
+  sleep 0.4
+end
+#+END_SRC
+
+** NESTING
+
+*** LOOP INCEPTION
+#+BEGIN_SRC ruby
+loop do
+  8.times do
+    sample :drum_cymbal_closed
+    sleep 0.1
+  end
+  
+  4.times do
+    sample :drum_cymbal_open
+    sleep 0.4
+  end
+end
+#+END_SRC
+
+*** CHALLENGE
+- Make this: https://www.youtube.com/watch?v=-tJYN-eG1zk
+#+BEGIN_SRC ruby
+use_bpm 76
+
+loop do
+  2.times do
+    sample :drum_heavy_kick
+    sleep 0.5
+  end
+  
+  sample :drum_snare_hard
+  sleep 1
+end
+#+END_SRC
+
+** SETUP/DRAW
+
+* RANDOMIZATION
+
+- rrand(x, y)
+  - give two values, and a random number inside the /range/ will be chosen
+
+** FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
+#+BEGIN_SRC ruby
+print rrand(20, 30)
+#+END_SRC
+
+#+BEGIN_SRC ruby
+loop do
+  sample :perc_bell, rate: (rrand 0.125, 1.5)
+  sleep rrand(0.2, 2)
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+use_synth :tb303
+use_synth_defaults release: 0.2
+
+loop do
+  play 40, cutoff: rrand(50, 90)
+  sleep 0.2
+end
+#+END_SRC
+
+** CHOOSE A NUMBER
+- [].choose 
+  - give a list of itens inside [brackets], and /only/ itens from that list will be chosen
+
+#+BEGIN_SRC ruby
+loop do
+  sample :drum_bass_hard
+  sleep [0.25, 0.5].choose
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+loop do
+  sample [:drum_cymbal_closed, :drum_cymbal_open].choose
+  sleep [0.125, 0.25, 0.5].choose
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+use_bpm 120
+
+loop do
+  8.times do
+    sample :drum_cymbal_closed
+    sleep 0.25
+  end
+  
+  4.times do
+    sample :drum_cymbal_open
+    sleep [0.25, 0.5].choose
+  end
+end
+#+END_SRC
+
+* BONUS STUFF!
+** live_loop
+
+#+BEGIN_SRC ruby
+live_loop :myBDLoop do
+  sample :drum_bass_hard
+  sleep [0.5, 0.25].choose
+end
+
+live_loop :myCymbalLoop do
+  stop
+  sample :drum_cymbal_open
+  sleep [0.125, 0.25].choose
+end
+#+END_SRC
