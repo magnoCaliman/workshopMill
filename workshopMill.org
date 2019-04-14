@@ -22,10 +22,6 @@
   play 88, attack: 4, release: 4
 #+END_SRC
 
-#+BEGIN_SRC supercollider
-  {SinOsc.ar(freq:440, amp:0.1)}.play
-#+END_SRC
-
 ** GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 - use_synth
   - synth specific parameters
