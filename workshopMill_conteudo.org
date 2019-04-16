@@ -1,9 +1,9 @@
 * FUNCTIONS & ARGUMENTS
 ** 'ONESHOT' FUNCTIONS
-- play arg
+- ~play arg~
   - opts: attack / release
 
-- sleep arg
+- ~sleep arg~
 
 // watch out for the position of the colons ":" on this one!
 - sample :foo
@@ -191,10 +191,3 @@ live_loop :myCymbalLoop do
   sleep [0.125, 0.25].choose
 end
 #+END_SRC
-
-
-* TESTE INLINE CODE
-
-não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61], attack: 0, susteain: 0, release: 0.2~
-
-não se comporta como src_ruby[:exports code]{play 60, release: 0.2}, mas sim src_ruby[:exports code]{play_pattern [60, 61], attack: 0, sustain: 0, release: 0.2}.
