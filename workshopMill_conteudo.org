@@ -5,7 +5,7 @@
 
 - ~sleep arg~
 
-// watch out for the position of the colons ":" on this one!
+# watch out for the position of the colons ":" on this one!
 - sample :foo
   - opts: rate
 
