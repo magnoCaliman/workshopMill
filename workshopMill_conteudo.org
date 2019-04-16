@@ -197,4 +197,4 @@ end
 
 não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61], attack: 0, susteain: 0, release: 0.2~
 
-não se comporta como src_ruby{play 60, release: 0.2}, mas sim src_ruby{play_pattern [60, 61], attack: 0, sustain: 0, release: 0.2}.
+não se comporta como src_ruby[:exports code]{play 60, release: 0.2}, mas sim src_ruby[:exports code]{play_pattern [60, 61], attack: 0, sustain: 0, release: 0.2}.
