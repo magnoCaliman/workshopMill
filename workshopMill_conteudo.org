@@ -198,11 +198,11 @@ end
 não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61], attack: 0, susteain: 0, release: 0.2~
 
 * ATALHOS
-M-enter - tocar!
-C-i - documentação
-M-a - select all
-M-{ - buffer left
-M-} - buffer right
+M-enter - tocar! <br>
+C-i - documentação <br>
+M-a - select all <br>
+M-{ - buffer left <br>
+M-} - buffer right <br>
 
 * PLAY
 - aceita opt com nome de nota -> play note (symbol_or_number)
