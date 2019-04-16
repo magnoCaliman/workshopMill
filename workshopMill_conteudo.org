@@ -197,33 +197,4 @@ end
 
 não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61], attack: 0, susteain: 0, release: 0.2~
 
-* ATALHOS
-M-enter - tocar! <br>
-C-i - documentação <br>
-M-a - select all <br>
-M-{ - buffer left <br>
-M-} - buffer right <br>
-
-* PLAY
-- aceita opt com nome de nota -> play note (symbol_or_number)
-- aceita opt notação de acordes
-#+BEGIN_SRC ruby
-play chord(:e3, :e4, M7)
-#+END_SRC
-
-** FUNÇÕES RELACIONADAS
-*** play_pattern notes (list)
-- aparentemente a duração da somatória do envelope /precisa/ ser um segundo. então:
-#+BEGIN_SRC ruby
-play_pattern [60, 61, 62], release: 0.2
-#+END_SRC
-
-não se comporta como 
-#+BEGIN_SRC ruby
-play 60, release: 0.2
-#+END_SRC
-
-mas sim
-#+BEGIN_SRC ruby
-play_pattern [60, 61, 62], attack: 0, sustain: 0, release: 0.2
-#+END_SRC
+não se comporta como src_ruby{play 60, release: 0.2}, mas sim src_ruby{play_pattern [60, 61], attack: 0, sustain: 0, release: 0.2}.
