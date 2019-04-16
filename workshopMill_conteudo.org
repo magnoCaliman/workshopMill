@@ -191,3 +191,12 @@ live_loop :myCymbalLoop do
   sleep [0.125, 0.25].choose
 end
 #+END_SRC
+
+
+* TESTE INLINE CODE
+
+não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61], attack: 0, susteain: 0, release: 0.2~
+
+* foo
+
+asdf
