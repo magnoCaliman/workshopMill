@@ -1,13 +1,13 @@
-* FUNCTIONS & PARAMETERS
+* FUNCTIONS & ARGUMENTS
 ** 'ONESHOT' FUNCTIONS
-- play n
-  - ops: attack / release
+- play arg
+  - opts: attack / release
 
-- sleep n
+- sleep arg
 
 // watch out for the position of the colons ":" on this one!
 - sample :foo
-  - ops: rate
+  - opts: rate
 
 #+BEGIN_SRC ruby
   sample :ambi_glass_hum
