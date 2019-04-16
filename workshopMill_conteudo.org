@@ -5,6 +5,21 @@
 
 - ~sleep arg~
 
+*** EXAMPLES
+
+#+BEGIN_SRC ruby
+play 60
+play 65
+play 70
+
+sleep 1
+
+play 68, attack: 3, release: 1
+play 69, attack: 1, release: 3
+play 62, attack: 3, release: 1
+play 65, attack: 1, release: 5
+#+END_SRC
+
 // watch out for the position of the colons ":" on this one!
 - sample :foo
   - opts: rate
