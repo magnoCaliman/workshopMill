@@ -6,10 +6,11 @@
 - ~sleep arg~
 
 *** /CONCEITOS IMPORTANTES/
-  - funções ("o que")
-  - argumentos ("como")
-    - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
-  - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
+- funções ("o que")
+- argumentos ("como")
+  - sempre se perguntar "o que significa o valor do argumento?"
+  - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
+- todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 
 *** EXAMPLES
 
