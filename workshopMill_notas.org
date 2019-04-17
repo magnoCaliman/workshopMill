@@ -1,10 +1,10 @@
 * ATALHOS
-M-enter - tocar!
-C-i - documentação
-M-a - select all
-M-{ - buffer left
-M-} - buffer right
-M-/ - comentario
+- M-enter - tocar!
+- C-i - documentação
+- M-a - select all
+- M-{ - buffer left
+- M-} - buffer right
+- M-/ - comentario
 
 * PLAY
 ~play note (symbol_or_number)~
