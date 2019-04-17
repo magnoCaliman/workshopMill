@@ -208,7 +208,7 @@ sleep sample_duration :loop_amen
 sample :loop_amen
 
 # já que
-puts(sample_duration :loop_amen)
+prints(sample_duration :loop_amen)
 #+END_SRC
 
 * BONUS STUFF!
