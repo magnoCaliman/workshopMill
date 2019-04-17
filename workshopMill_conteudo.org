@@ -83,7 +83,7 @@ play 94, attack: 5, release: 5
   play 88, attack: 4, release: 4
 #+END_SRC
 
-*** /CONCEITOS IMPORTANTES/
+**** /CONCEITOS IMPORTANTES/
 - funções ("o que")
 - argumentos ("como")
   - sempre se perguntar "o que significa o valor do argumento?"
