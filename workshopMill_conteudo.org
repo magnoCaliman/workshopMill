@@ -1,11 +1,12 @@
 * FUNCTIONS & ARGUMENTS
 ** 'ONESHOT' FUNCTIONS
+*** ~play~ and ~sleep~
 - ~play arg~
   - options: amp / attack / release
 
 - ~sleep arg~
 
-*** /CONCEITOS IMPORTANTES/
+**** /CONCEITOS IMPORTANTES/
 - funções ("o que")
 - argumentos ("como")
   - sempre se perguntar "o que significa o valor do argumento?"
@@ -13,8 +14,7 @@
 - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 - RTFM
 
-
-*** EXAMPLES
+**** EXAMPLES
 #+BEGIN_SRC ruby
 play 70
 sleep 1
@@ -72,9 +72,10 @@ play 93, attack: 5, release: 10
 play 94, attack: 5, release: 5
 #+END_SRC
 
+*** ~sample~
+- ~sample arg~
+  - optionss: rate
 // watch out for the position of the colons ":" on this one!
-- sample :foo
-  - opts: rate
 
 #+BEGIN_SRC ruby
   sample :ambi_glass_hum
