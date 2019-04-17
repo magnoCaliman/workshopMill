@@ -15,14 +15,12 @@
 
 
 *** EXAMPLES
-1.
 #+BEGIN_SRC ruby
 play 70
 sleep 1
 play 75
 #+END_SRC
 
-2.
 #+BEGIN_SRC ruby
 play 70, release: 0.2
 sleep 0.25
@@ -40,7 +38,6 @@ play 81, release: 2
 play 78, release: 2
 #+END_SRC
 
-3.
 #+BEGIN_SRC ruby
 play 60
 play 65
@@ -48,10 +45,31 @@ play 70
 
 sleep 1
 
-play 62, attack: 3, release: 1
-play 68, attack: 3, release: 1
-play 65, attack: 1, release: 5
-play 69, attack: 1, release: 3
+play 62, attack: 0.1, release: 3
+sleep 0.2
+play 65, attack: 0.1, release: 3
+sleep 0.2
+play 69, attack: 0.1, release: 3
+sleep 0.2
+play 72, attack: 0.1, release: 3
+play 77, attack: 0.1, release: 3
+#+END_SRC
+
+#+BEGIN_SRC ruby
+play 90, attack: 30
+play 88, attack: 30
+play 86, attack: 30
+
+play 89, attack: 10, release: 5
+play 87, attack: 10, release: 5
+play 85, attack: 10, release: 5
+
+sleep 25
+
+play 91, attack: 5, release: 5
+play 92, attack: 5, release: 5
+play 93, attack: 5, release: 10
+play 94, attack: 5, release: 5
 #+END_SRC
 
 // watch out for the position of the colons ":" on this one!
@@ -129,6 +147,16 @@ end
   sample :drum_cymbal_open
   sleep 0.4
 end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+# from http://sonic-pi.mehackit.org/exercises/en/10-cheatsheet/01-cheatsheet.html
+2.times do
+  play_pattern_timed [:E5, :Eb5], [0.25]
+end
+play_pattern_timed [:e5, :b4, :d5, :c5], [0.25]
+play :a4
+sleep 1
 #+END_SRC
 
 ** NESTING
