@@ -198,6 +198,19 @@ loop do
 end
 #+END_SRC
 
+* MODULARITY / FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
+- mover toda a sessão para cá, junto com randomização
+- exemplo como
+
+#+BEGIN_SRC ruby
+sample :loop_amen
+sleep sample_duration :loop_amen
+sample :loop_amen
+
+# já que
+puts(sample_duration :loop_amen)
+#+END_SRC
+
 * BONUS STUFF!
 ** live_loop
 
