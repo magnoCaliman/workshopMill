@@ -23,6 +23,23 @@ play 75
 #+END_SRC
 
 #+BEGIN_SRC ruby
+play 70, release: 0.2
+sleep 0.25
+play 71, release: 0.2
+sleep 0.25
+play 83, release: 0.2
+sleep 0.25
+
+play 81, release: 4
+play 79, release: 4
+
+sleep 2
+
+play 81, release: 2
+play 78, release: 2
+#+END_SRC
+
+#+BEGIN_SRC ruby
 play 60
 play 65
 play 70

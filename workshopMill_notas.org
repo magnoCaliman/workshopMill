@@ -12,7 +12,6 @@
 - arg com nome de nota -> ~play :e5~ / ~play :fs3~
 - arg notação de acordes -> ~play chord(:e3,:M7)~
 - arg para pausa -> ~play :r~
-- teste inline src_ruby{play chord(:e3, :M7)} com sintax highlight...
 
 ** FUNÇÕES RELACIONADAS
 *** play_chord notes (list)
@@ -32,7 +31,7 @@
 # agora dá para tocar em compasso composto...
 colecao = scale(:e, :messiaen6)
 loop do
-  play colecao.take(9).shuffle.tick
+  play colecao.shuffle.tick
   sleep 1.0/[3, 6].choose
 end
 #+END_SRC
