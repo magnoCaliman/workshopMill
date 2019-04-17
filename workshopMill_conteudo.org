@@ -3,6 +3,12 @@
 - ~play arg~
   - opts: attack / release
 
+- /conceitos importantes/
+  - funções ("o que")
+  - argumentos ("como")
+    - nem todos argumentos são obrigatórios (sonic pi chama de opts)
+  - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
+
 - ~sleep arg~
 
 *** EXAMPLES
