@@ -14,7 +14,7 @@
 - RTFM
 
 
-*** TODO EXAMPLES
+*** EXAMPLES
 
 #+BEGIN_SRC ruby
 play 70
