@@ -15,13 +15,14 @@
 
 
 *** EXAMPLES
-
+1.
 #+BEGIN_SRC ruby
 play 70
 sleep 1
 play 75
 #+END_SRC
 
+2.
 #+BEGIN_SRC ruby
 play 70, release: 0.2
 sleep 0.25
@@ -39,6 +40,7 @@ play 81, release: 2
 play 78, release: 2
 #+END_SRC
 
+3.
 #+BEGIN_SRC ruby
 play 60
 play 65
