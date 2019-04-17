@@ -13,7 +13,7 @@
 - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 - RTFM
 
-*** EXAMPLES
+*** TODO EXAMPLES
 
 #+BEGIN_SRC ruby
 play 60
