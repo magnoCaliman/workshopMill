@@ -9,9 +9,10 @@
 * PLAY
 ~play note (symbol_or_number)~
 - arg float -> ~play 60.5~
-- arg com nome de nota -> ~play :e5~ / ~play fs3~
+- arg com nome de nota -> ~play :e5~ / ~play :fs3~
 - arg notação de acordes -> ~play chord(:e3,:M7)~
 - arg para pausa -> ~play :r~
+- teste inline src_ruby{play chord(:e3, :M7)} com sintax highlight...
 
 ** FUNÇÕES RELACIONADAS
 *** play_chord notes (list)
@@ -23,20 +24,16 @@
 
 * SLEEP
 ~sleep beats (number)~
-- arg em unidades de tempo (não é segundo...). modificado por ~use_bpm~
-- aceita arg como float, mas a conversão de tipo é confusa (estilo Max / JS). ~sleep 1/3~ não funciona. Requer ~sleep 1.0/3~
+- arg em unidades de tempo (não é segundo...). subordinado ao valor de ~use_bpm~
+- aceita arg como float, mas com encrencas de tipologia estilo Max/JS. ~sleep 1/3~ não funciona. requer ~sleep 1.0/3~
 - sobre tipologia em ruby: http://www.rubyfleebie.com/2007/07/09/ruby-is-dynamically-and-strongly-typed/
 
 #+BEGIN_SRC ruby
 # agora dá para tocar em compasso composto...
-t = 1.0/3
+colecao = scale(:e, :messiaen6)
 loop do
-  play 70
-  sleep t
-  play 71
-  sleep t
-  play 73
-  sleep t
+  play colecao.take(9).shuffle.tick
+  sleep 1.0/[3, 6].choose
 end
 #+END_SRC
 

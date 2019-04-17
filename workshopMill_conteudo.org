@@ -13,7 +13,14 @@
 - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 - RTFM
 
+
 *** TODO EXAMPLES
+
+#+BEGIN_SRC ruby
+play 70
+sleep 1
+play 75
+#+END_SRC
 
 #+BEGIN_SRC ruby
 play 60
@@ -22,10 +29,10 @@ play 70
 
 sleep 1
 
-play 68, attack: 3, release: 1
-play 69, attack: 1, release: 3
 play 62, attack: 3, release: 1
+play 68, attack: 3, release: 1
 play 65, attack: 1, release: 5
+play 69, attack: 1, release: 3
 #+END_SRC
 
 // watch out for the position of the colons ":" on this one!
@@ -138,6 +145,7 @@ loop do
 end
 #+END_SRC
 
+*** EFECTS
 * RANDOMIZATION
 
 - rrand(x, y)
