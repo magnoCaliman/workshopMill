@@ -1,6 +1,6 @@
-* FUNCTIONS & ARGUMENTS
-** 'ONESHOT' FUNCTIONS
-*** ~play~ and ~sleep~
+* 1. FUNCTIONS & ARGUMENTS
+** 1.1 'ONESHOT' FUNCTIONS
+*** 1.1.1 ~play~ and ~sleep~
 - ~play arg~
   - options: amp / attack / release
 
@@ -65,7 +65,7 @@ play 94, attack: 5, release: 5
 #+END_SRC
 
 
-*** ~sample~
+*** 1.1.2 ~sample~
 - ~sample arg~
   - options: rate
 // watch out for the position of the colons ":" on this one!
@@ -92,7 +92,7 @@ play 94, attack: 5, release: 5
 - linguagem só entende palavras que fazem parte do seu vocabulário
 - RTFM
 
-** GLOBAL BEHAVIOUR CHANGING FUNCTIONS
+** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 - use_synth
   - synth specific parameters
 - use_synth_defaults
