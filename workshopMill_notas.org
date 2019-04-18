@@ -36,6 +36,8 @@ loop do
 end
 #+END_SRC
 
+* SAMPLE
+~sample name_or_path (symbol or string)~
 
 * DÚVIDAS
 - amp_slide

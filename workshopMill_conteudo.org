@@ -3,7 +3,6 @@
 *** 1.1.1 ~play~ and ~sleep~
 - ~play arg~
   - options: amp / attack / release
-
 - ~sleep arg~
 
 **** EXAMPLES
@@ -64,6 +63,7 @@ play 93, attack: 5, release: 10
 play 94, attack: 5, release: 5
 #+END_SRC
 
+
 *** 1.1.2 ~sample~
 - ~sample arg~
   - options: rate
@@ -90,6 +90,7 @@ play 94, attack: 5, release: 5
 - todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 - linguagem só entende palavras que fazem parte do seu vocabulário
 - RTFM
+
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 - use_synth
