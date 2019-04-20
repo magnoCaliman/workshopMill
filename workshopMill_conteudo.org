@@ -100,7 +100,9 @@ sample :guit_e_fifths
   sleep 0.1
   play 63, release: 2
   play 62, release: 3
+
   sleep 2
+
   sample :ambi_haunted_hum, rate: 0.5
   play 90, attack: 4, release: 6
   sleep 2
@@ -112,8 +114,8 @@ sample :guit_e_fifths
 - argumentos ("como")
   - sempre se perguntar "o que significa o valor do argumento?"
   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
-- todo o código é lido de uma vez, na ordem em que está escrito. a página inteira (fica claro com acordes)
 - linguagem só entende palavras que fazem parte do seu vocabulário
+- a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
 - RTFM
 
 
