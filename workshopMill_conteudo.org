@@ -67,7 +67,7 @@ play 94, attack: 5, release: 5
 *** 1.1.2 ~sample~
 - ~sample arg~
   - options: rate
-!! watch out for the position of the colons ":" on this one!
+!! watch out for the position of the colons "*:*" on this one
 
 #+BEGIN_SRC ruby
 sample :loop_amen_full
