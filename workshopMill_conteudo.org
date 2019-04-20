@@ -84,6 +84,17 @@ sample :loop_amen_full, rate: -1
 #+END_SRC
 
 #+BEGIN_SRC ruby
+##| uncomment lines 4 through 8 one at a time
+
+sample :guit_e_fifths
+##| sample :guit_e_fifths, rate: 1.01
+##| sample :guit_e_fifths, rate: 1.02
+##| sample :guit_e_fifths, rate: 1.03
+##| sample :guit_e_fifths, rate: 1.04
+##| sample :guit_e_fifths, rate: 1.05
+#+END_SRC
+
+#+BEGIN_SRC ruby
   sample :ambi_glass_hum
   play 64, release: 1.8
   sleep 0.1
