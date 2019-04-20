@@ -41,6 +41,15 @@ end
 
 * DÚVIDAS
 - amp_slide
+- modular valores ao longo do tempo. rampa em rate de sample, por exemplo
+
+#+BEGIN_SRC ruby
+foo = sample :ambli_glass_hum
+sleep 2
+control foo, rate: 2
+#+END_SRC
+
+retorna ~Invalid arg modulation attempt for :basic_stereo_player. Opt :rate is non modulatable~
 
 * REFERÊNCIAS
 - https://www.raspberrypi.org/magpi/sonic-pi-coded-beats/
