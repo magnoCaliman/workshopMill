@@ -127,7 +127,7 @@ sample :perc_impact1
   play 88, attack: 4, release: 4
 #+END_SRC
 
-#+BEGIN_SRC
+#+BEGIN_SRC ruby
 sample "~/samples/monge.wav", rate: 1
 sleep 2
 sample "~/samples/monge.wav", rate: 1.5
