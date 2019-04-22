@@ -18,7 +18,7 @@
 ~play_chord [60, 65, 70]~
 *** play_pattern notes (list)
 - aparentemente a duração da somatória do envelope /precisa/ ser um segundo. 
-- então ~play_pattern [60, 61, 62], release: 0.2~ não se comporta como ~play 60, release: 0.2~, mas sim ~play_pattern [60, 61, 62], attack: 0, sustain: 0, release: 0.2~
+- então ~play_pattern [60, 61, 62], release: 0.2~ não se comporta como ~play 60, release: 0.2~ (apesar do que a documentação diz...), mas sim ~play_pattern [60, 61, 62], attack: 0, sustain: 0, release: 0.2~
 
 
 * SLEEP
@@ -39,6 +39,12 @@ end
 * SAMPLE
 ~sample name_or_path (symbol or string)~
 
+** FUNÇÕES RELACIONADAS
+
+** OPTS INTERESSANTES
+~slice~
+~pitch_stretch~ != ~pitch~
+
 * DÚVIDAS
 - amp_slide
 - modular valores ao longo do tempo. rampa em rate de sample, por exemplo
@@ -50,6 +56,8 @@ control foo, rate: 2
 #+END_SRC
 
 retorna ~Invalid arg modulation attempt for :basic_stereo_player. Opt :rate is non modulatable~
+
+- play_chord [60, 62, 63] + 12 não funciona.
 
 * REFERÊNCIAS
 - https://www.raspberrypi.org/magpi/sonic-pi-coded-beats/

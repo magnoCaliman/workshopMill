@@ -66,7 +66,7 @@ play 94, attack: 5, release: 5
 
 *** 1.1.2 ~sample~
 - ~sample arg~
-  - options: rate
+  - options: rate, beat_stretch
 !! watch out for the position of the colons "*:*" on this one
 
 #+BEGIN_SRC ruby
@@ -100,9 +100,9 @@ sample :bass_hard_c, rate: 0.4, release: 1
 
 sleep 4
 
-sample :loop_electric
+sample :loop_electric, beat_stretch: 2
 sleep 2
-sample :loop_electric
+sample :loop_electric, beat_stretch: 2
 sleep 2
 
 sample :vinyl_rewind
@@ -135,13 +135,16 @@ sleep 10
 sample "~/Downloads/samples/monge.wav", rate: 2, amp: 0.8
 #+END_SRC
 
+**** OTHER FUNCTIONS AND OPTS TO EXPLORE
+~play_chord~
+
 **** /CONCEITOS IMPORTANTES/
+- linguagem só entende palavras que fazem parte do seu vocabulário
+- a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
 - funções ("o que")
 - argumentos ("como")
   - sempre se perguntar "o que significa o valor do argumento?"
   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
-- linguagem só entende palavras que fazem parte do seu vocabulário
-- a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
 - RTFM
 
 
