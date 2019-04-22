@@ -95,6 +95,45 @@ sample :guit_e_fifths
 #+END_SRC
 
 #+BEGIN_SRC ruby
+##| without beat_stretch
+sample :loop_breakbeat
+sample :loop_compus
+sleep 4
+sample :loop_breakbeat
+sample :loop_compus
+
+##| with beat_stretch
+##| sample :loop_breakbeat, beat_stretch: 4
+##| sample :loop_compus, beat_stretch: 4
+##| sleep 4
+##| sample :loop_breakbeat, beat_stretch: 4
+##| sample :loop_compus, beat_stretch: 4
+#+END_SRC
+
+#+BEGIN_SRC ruby
+sample "~/Downloads/samples/forest_02.wav"
+#+END_SRC
+
+#+BEGIN_SRC ruby
+##| this sample has 21 seconds (so it lasts approximately 21 beats)
+sample "~/Downloads/samples/forest_02.wav"
+
+##| now it lasts for 210 beats...
+##| sample "~/Downloads/samples/forest_02.wav", beat_stretch: 210
+
+##| beat_stretch in this case has similar effect to this...
+##| sample "~/Downloads/samples/forest_02.wav", rate: 0.1
+#+END_SRC
+
+#+BEGIN_SRC ruby
+sample "~/Downloads/samples/monge.wav", rate: 1
+sleep 2
+sample "~/Downloads/samples/monge.wav", rate: 1.5
+sleep 10
+sample "~/Downloads/samples/monge.wav", rate: 2, amp: 0.8
+#+END_SRC
+
+#+BEGIN_SRC ruby
 sample :bass_drop_c, rate: 0.2
 sample :bass_hard_c, rate: 0.4, release: 1
 
@@ -125,14 +164,6 @@ sample :perc_impact1
   play 90, attack: 4, release: 6
   sleep 2
   play 88, attack: 4, release: 4
-#+END_SRC
-
-#+BEGIN_SRC ruby
-sample "~/Downloads/samples/monge.wav", rate: 1
-sleep 2
-sample "~/Downloads/samples/monge.wav", rate: 1.5
-sleep 10
-sample "~/Downloads/samples/monge.wav", rate: 2, amp: 0.8
 #+END_SRC
 
 **** OTHER FUNCTIONS AND OPTS TO EXPLORE
