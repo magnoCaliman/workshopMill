@@ -128,11 +128,11 @@ sample :perc_impact1
 #+END_SRC
 
 #+BEGIN_SRC ruby
-sample "~/samples/monge.wav", rate: 1
+sample "~/Downloads/samples/monge.wav", rate: 1
 sleep 2
-sample "~/samples/monge.wav", rate: 1.5
+sample "~/Downloads/samples/monge.wav", rate: 1.5
 sleep 10
-sample "~/samples/monge.wav", rate: 2, amp: 0.8
+sample "~/Downloads/samples/monge.wav", rate: 2, amp: 0.8
 #+END_SRC
 
 **** /CONCEITOS IMPORTANTES/
