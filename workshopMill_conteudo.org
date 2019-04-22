@@ -169,7 +169,7 @@ sleep 2
 play 88, attack: 2, release: 4, amp: 0.05
 #+END_SRC
 
-**** OTHER FUNCTIONS AND OPTS TO EXPLORE
+**** TODO OTHER FUNCTIONS AND OPTS TO EXPLORE
 ~play_chord~
 
 **** /CONCEITOS IMPORTANTES/
@@ -181,7 +181,6 @@ play 88, attack: 2, release: 4, amp: 0.05
   - em outras palavras: sempre se perguntar "o que significa o valor do argumento?"
   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
 - RTFM
-
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 - use_synth
