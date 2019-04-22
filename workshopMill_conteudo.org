@@ -133,6 +133,8 @@ sleep 10
 sample "~/Downloads/samples/monge.wav", rate: 2, amp: 0.8
 #+END_SRC
 
+- tudo junto e misturado...
+
 #+BEGIN_SRC ruby
 sample :bass_drop_c, rate: 0.2
 sample :bass_hard_c, rate: 0.4, release: 1
