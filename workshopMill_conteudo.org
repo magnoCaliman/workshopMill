@@ -183,9 +183,8 @@ play 88, attack: 2, release: 4, amp: 0.05
 - RTFM
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
-- use_synth
-  - synth specific parameters
-- use_synth_defaults
+- ~use_synth~
+- ~use_synth_defaults~
 
 #+BEGIN_SRC ruby
 use_synth :fm
