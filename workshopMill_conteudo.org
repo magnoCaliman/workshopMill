@@ -189,7 +189,7 @@ play 88, attack: 2, release: 4, amp: 0.05
 - ~use_synth arg~
   - options: synth specific (with a few opts shared between many different synths)
 
-
+**** EXAMPLES
 
 #+BEGIN_SRC ruby
 use_synth :prophet
@@ -231,12 +231,6 @@ play 78, amp: 10
 #+END_SRC
 
 #+BEGIN_SRC ruby
-#algum exemplo com fm mostrando que precisa
-#olhar documentacao de cada synth para saber
-#o nome dos opt para usar
-#+END_SRC
-
-#+BEGIN_SRC ruby
 # this option makes a difference in the sound between notes...
 use_synth :fm
 play 50, depth: 1
@@ -263,6 +257,10 @@ sleep 1
 *** 1.2.2 ~use_synth_defaults~
 - ~use_synth_defaults~
   - options: synth specific (with a few opts shared between many different synths)
+
+**** TODO EXAMPLES
+
+Tudo junto e misturado...
 
 #+BEGIN_SRC ruby
 use_synth :fm
