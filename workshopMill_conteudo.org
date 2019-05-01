@@ -67,6 +67,8 @@ play 94, attack: 5, release: 5
 *** 1.1.2 ~sample~
 - ~sample arg~
   - options: ~rate~, ~beat_stretch~
+
+**** EXAMPLES
 !! watch out for the position of the colons "*:*" on this one
 
 #+BEGIN_SRC ruby
