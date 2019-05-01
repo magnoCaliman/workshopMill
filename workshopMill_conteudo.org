@@ -169,10 +169,10 @@ sleep 2
 play 88, attack: 2, release: 4, amp: 0.05
 #+END_SRC
 
-**** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
+*** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 ~play_chord~
 
-**** TODO /CONCEITOS IMPORTANTES/
+*** TODO /CONCEITOS IMPORTANTES/
 - linguagem só entende palavras que fazem parte do seu vocabulário
 - a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
 - funções ("o que")
@@ -183,8 +183,11 @@ play 88, attack: 2, release: 4, amp: 0.05
 - RTFM
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
-- ~use_synth~
-- ~use_synth_defaults~
+*** 1.2.1 ~use_synth~
+- ~use_synth arg~
+  - options: synth specific (with a few opts shared between many different synths)
+
+
 
 #+BEGIN_SRC ruby
 use_synth :prophet
@@ -254,6 +257,10 @@ sleep 1
 ##| play 50, depth: 100
 ##| sleep 1
 #+END_SRC
+
+*** 1.2.2 ~use_synth_defaults~
+- ~use_synth_defaults~
+  - options: synth specific (with a few opts shared between many different synths)
 
 #+BEGIN_SRC ruby
 use_synth :fm
