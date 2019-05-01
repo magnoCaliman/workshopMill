@@ -45,8 +45,10 @@ end
 ~slice~
 ~pitch_stretch~ != ~pitch~
 
+* USE_SYNTH
+
 * DÚVIDAS
-- amp_slide
+- _slide
 - modular valores ao longo do tempo. rampa em rate de sample, por exemplo
 
 #+BEGIN_SRC ruby
