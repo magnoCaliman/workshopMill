@@ -331,7 +331,6 @@ play 74
 ** 2.1 ~LOOP DO/END~
 
 - ~loop do <code> end~
-  - No stoping! Good for layering...
 
 **** EXAMPLES
 #+BEGIN_SRC ruby
