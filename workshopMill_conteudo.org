@@ -328,11 +328,12 @@ play 74
 #+END_SRC
 
 * 2. BLOCKS
-** LOOP DO/END
+** 2.1 ~LOOP DO/END~
 
-- loop do/end
-  - no stoping! good for layering...
+- ~loop do <code> end~
+  - no stoping! Good for layering...
 
+*** EXAMPLES
 #+BEGIN_SRC ruby
 loop do
   sample :bd_fat
@@ -340,9 +341,28 @@ loop do
 end
 #+END_SRC
 
-** x.TIMES DO/END
+#+BEGIN_SRC ruby
+loop do
+  play 72
+  sleep 1
+end
 
-- x.times do/end
+play 666 #this never get's evaluated
+#+END_SRC
+
+#+BEGIN_SRC ruby
+# All play no sleep makes loop a dull thread...
+loop do
+  play 70
+end
+#+END_SRC
+
+
+** 2.2 ~n.TIMES DO/END~
+- ~n.times do <code> end~
+
+*** EXAMPLES
+
 #+BEGIN_SRC ruby
 8.times do
   sample :drum_cymbal_closed
@@ -356,18 +376,44 @@ end
 #+END_SRC
 
 #+BEGIN_SRC ruby
-# from http://sonic-pi.mehackit.org/exercises/en/10-cheatsheet/01-cheatsheet.html
+use_bpm 112
+use_synth_defaults release: 0.3
+
 2.times do
-  play_pattern_timed [:E5, :Eb5], [0.25]
+  play 50
+  sleep 0.5
+  play 50
+  sleep 0.5
+  play 50
+  sleep 0.5
+  play 50
+  sleep 0.25
+  play 50
+  sleep 0.25
+  play 50, release: 0.5
+  sleep 0.5
+  play 43, release: 1
+  sleep 2
 end
-play_pattern_timed [:e5, :b4, :d5, :c5], [0.25]
-play :a4
+
+use_synth :piano
+use_synth_defaults release: 1
+
+play 74
+play 79
+play 86
+
 sleep 1
+
+play 74
+play 81
+play 86
 #+END_SRC
 
-** NESTING
 
-*** LOOP INCEPTION
+** 2.3 NESTING
+
+*** 2.3.1 LOOP INCEPTION
 #+BEGIN_SRC ruby
 loop do
   8.times do
