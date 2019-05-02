@@ -259,10 +259,28 @@ sleep 1
   - options: synth specific (with a few opts shared between many different synths)
 
 **** EXAMPLES
+Let's refactor some of the first examples, but now using ~use_synth_defaults~
+#+BEGIN_SRC ruby
+use_synth_defaults release: 0.2
+play 70
+sleep 0.25
+play 71
+sleep 0.25
+play 83
+sleep 0.25
+
+use_synth_defaults release: 4
+play 81
+play 79
+
+sleep 2
+
+use_synth_defaults release: 2
+play 81
+play 78
+#+END_SRC
 
 #+BEGIN_SRC ruby
-# let's refactor one of the first examples, with use_synth_defaults
-
 play 60
 play 65
 play 70
@@ -309,9 +327,6 @@ play 67
 play 70
 play 74
 #+END_SRC
-
-
-
 
 * 2. BLOCKS
 ** LOOP DO/END
