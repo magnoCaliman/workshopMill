@@ -251,8 +251,8 @@ sleep 1
 ##| play 50, depth: 30
 ##| sleep 1
 ##| play 50, depth: 100
-##| sleep 1
 #+END_SRC
+
 
 *** 1.2.2 ~use_synth_defaults~
 - ~use_synth_defaults arg~
