@@ -331,9 +331,9 @@ play 74
 ** 2.1 ~LOOP DO/END~
 
 - ~loop do <code> end~
-  - no stoping! Good for layering...
+  - No stoping! Good for layering...
 
-*** EXAMPLES
+**** EXAMPLES
 #+BEGIN_SRC ruby
 loop do
   sample :bd_fat
@@ -361,7 +361,7 @@ end
 ** 2.2 ~n.TIMES DO/END~
 - ~n.times do <code> end~
 
-*** EXAMPLES
+**** EXAMPLES
 
 #+BEGIN_SRC ruby
 8.times do
@@ -414,6 +414,7 @@ play 86
 ** 2.3 NESTING
 
 *** 2.3.1 LOOP INCEPTION
+
 #+BEGIN_SRC ruby
 loop do
   8.times do
@@ -428,8 +429,6 @@ loop do
 end
 #+END_SRC
 
-*** CHALLENGE
-- Make this: https://www.youtube.com/watch?v=-tJYN-eG1zk
 #+BEGIN_SRC ruby
 use_bpm 76
 
@@ -444,7 +443,29 @@ loop do
 end
 #+END_SRC
 
-*** EFECTS
+- Without playing the next example, can you analize it and tell:
+  - Since the outer ~loop do/end~ block has no ~sleep~ (did you noticed?), does that mean the code will crash and not play at all?
+  - If you think it won't crash, how many seconds after the beggining will ~play 90~ and ~play 86~ be heard?
+#+BEGIN_SRC ruby
+loop do
+  sample :loop_compus, beat_stretch: 8
+  
+  2.times do
+    sample :bass_drop_c, amp: 0.5, beat_stretch: 2
+    sleep 2
+    sample :bass_hard_c, amp: 0.5, beat_stretch: 2
+    sleep 2
+    
+    play 90
+  end
+  
+  play 86
+end
+#+END_SRC
+
+*** 2.3.2 EFFECTS
+
+
 * 3. RANDOMIZATION
 
 - rrand(x, y)
