@@ -289,8 +289,7 @@ play 70
 play 74
 #+END_SRC
 
-*** 1.2.3 ~use_bpm~
-- ~use_bpm arg~
+
 * 2. BLOCKS
 ** LOOP DO/END
 
