@@ -236,7 +236,7 @@ play 78, amp: 10
 #+END_SRC
 
 #+BEGIN_SRC ruby
-# this option makes a difference in the sound between notes...
+# this option makes a difference in the sound between notes.
 use_synth :fm
 play 50, depth: 1
 sleep 1
@@ -500,10 +500,10 @@ with_fx :gverb, room: 100, release: 10 do
 end
 #+END_SRC
 
-Since effects are blocks, you can nest them.
-Think of it as an /effects chain/ that works from the /inside out/.
-
 #+BEGIN_SRC ruby 
+#Since effects are blocks, you can nest them.
+#Think of it as an /effects chain/ that works from the inside out.
+
 with_fx :level, amp: 0.1 do
   with_fx :flanger, depth: 10 do
     with_fx :distortion, distort: 0.9 do
