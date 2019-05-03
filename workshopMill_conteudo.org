@@ -171,8 +171,11 @@ sleep 2
 play 88, attack: 2, release: 4, amp: 0.05
 #+END_SRC
 
+
 *** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
-~play_chord~
+- ~play_chord~
+- ~play_pattern~
+- ~play_pattern_timed~
 
 *** TODO /CONCEITOS IMPORTANTES/
 - linguagem só entende palavras que fazem parte do seu vocabulário
@@ -184,7 +187,9 @@ play 88, attack: 2, release: 4, amp: 0.05
   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
 - RTFM
 
+
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
+
 *** 1.2.1 ~use_synth~
 - ~use_synth arg~
   - options: synth specific (with a few opts shared between many different synths)
@@ -252,6 +257,7 @@ sleep 1
 ##| sleep 1
 ##| play 50, depth: 100
 #+END_SRC
+
 
 *** 1.2.2 ~use_synth_defaults~
 - ~use_synth_defaults arg~
@@ -327,6 +333,11 @@ play 70
 play 74
 #+END_SRC
 
+
+*** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
+- ~use_sample_bpm~
+  - opt: num_beats
+- ~use_sample_defaults~
 
 * 2. BLOCKS
 ** 2.1 ~LOOP DO/END~
