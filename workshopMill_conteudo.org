@@ -407,7 +407,7 @@ use_synth_defaults release: 0.3
 end
 
 use_synth :piano
-use_synth_defaults release: 1
+use_synth_defaults release: 2
 
 play 74
 play 79
@@ -419,6 +419,7 @@ play 74
 play 81
 play 86
 #+END_SRC
+
 
 ** 2.3 NESTING
 
@@ -453,7 +454,7 @@ end
 #+END_SRC
 
 - Without playing the next example, can you analize it and tell:
-  - Since the outer ~loop do/end~ block has no ~sleep~ (did you noticed?), does that mean the code will crash and not play at all?
+  - Since the outer ~loop do/end~ block has no ~sleep~ (did you noticed it in the last example?), does that mean the code will crash and not play at all?
   - If you think it won't crash, how many seconds after the beggining will ~play 90~ and ~play 86~ be heard?
 #+BEGIN_SRC ruby
 loop do
@@ -469,25 +470,6 @@ loop do
   end
   
   play 86
-end
-#+END_SRC
-
-- From the built in tutorial, under item 5.2 "Iteration and Loops":
-#+BEGIN_SRC ruby
-4.times do
-
-  sample :drum_heavy_kick
-  2.times do
-    sample :elec_blip2, rate: 2
-    sleep 0.25
-  end
-
-  sample :elec_snare
-  4.times do
-    sample :drum_tom_mid_soft
-    sleep 0.125
-  end
-
 end
 #+END_SRC
 
@@ -518,10 +500,15 @@ with_fx :gverb, room: 100, release: 10 do
 end
 #+END_SRC
 
-#+BEGIN_SRC ruby
-with_fx :flanger, depth: 10 do
-  with_fx :distortion, distort: 0.9 do
-    sample :loop_amen_full, amp: 0.5
+Since effects are blocks, you can nest them.
+Think of it as an /effects chain/ that works from the /inside out/.
+
+#+BEGIN_SRC ruby 
+with_fx :level, amp: 0.1 do
+  with_fx :flanger, depth: 10 do
+    with_fx :distortion, distort: 0.9 do
+      sample :loop_amen_full
+    end
   end
 end
 #+END_SRC
