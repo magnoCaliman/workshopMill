@@ -336,7 +336,7 @@ play 74
 
 *** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 - ~use_sample_bpm~
-  - opt: num_beats
+  - options: ~num_beats~
 - ~use_sample_defaults~
 
 * 2. BLOCKS
@@ -491,7 +491,7 @@ end
 end
 #+END_SRC
 
-*** 2.3.2 EFFECTS
+** 2.4 EFFECTS
 - ~with_fx arg do <code> end~
   - options: effect specific (with a few opts shared between many different effects)
 
