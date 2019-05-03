@@ -528,7 +528,7 @@ end
 * 3. MODULARITY
 ** 3.1 FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
 *** 3.1.1 ~sample_duration~ and ~print~
-- Some functions are not meant to generate or process sound sound, but are meant to /return values/.
+- Some functions are not meant to generate or process sound, but are meant to /return values/.
 - ~sample_duration <arg>~
 - ~print <arg>~
 
