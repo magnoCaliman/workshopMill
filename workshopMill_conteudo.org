@@ -327,6 +327,7 @@ play 70
 play 74
 #+END_SRC
 
+
 * 2. BLOCKS
 ** 2.1 ~LOOP DO/END~
 
@@ -355,7 +356,6 @@ loop do
   play 70
 end
 #+END_SRC
-
 
 ** 2.2 ~n.TIMES DO/END~
 - ~n.times do <code> end~
@@ -408,7 +408,6 @@ play 74
 play 81
 play 86
 #+END_SRC
-
 
 ** 2.3 NESTING
 
@@ -534,12 +533,24 @@ end
 ##| end
 #+END_SRC
 
-* 3. RANDOMIZATION
 
-- rrand(x, y)
+* 3. MODULARITY
+** 3.1 FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
+- Some functions don't [have a direct effect on the program](generating sound, sleeping, effecting sound), but are used to /return values/.
+
+#+BEGIN_SRC ruby
+sample :loop_amen
+sleep sample_duration :loop_amen
+sample :loop_amen
+
+# já que
+print(sample_duration :loop_amen)
+#+END_SRC
+
+** 3.2 RANDOMISATION
+*** 3.2.1 ~rrand(x, y)~
   - give two values, and a random number inside the /range/ will be chosen
 
-** FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
 #+BEGIN_SRC ruby
 print rrand(20, 30)
 #+END_SRC
@@ -561,7 +572,7 @@ loop do
 end
 #+END_SRC
 
-** CHOOSE A NUMBER
+*** 3.2.2 ~.choose~
 - [].choose 
   - give a list of itens inside [brackets], and /only/ itens from that list will be chosen
 
@@ -595,18 +606,22 @@ loop do
 end
 #+END_SRC
 
-* 4. MODULARITY / FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
-- mover toda a sessão para cá, junto com randomização
-- exemplo como
+*** 3.2.2 ~one_in()~
 
 #+BEGIN_SRC ruby
-sample :loop_amen
-sleep sample_duration :loop_amen
-sample :loop_amen
+use_synth :dsaw
+use_synth_defaults release: 2
 
-# já que
-prints(sample_duration :loop_amen)
+#new play opt "on" to explore
+loop do
+  play 60, on: one_in(2)
+  play 63, on: one_in(4)
+  play 67, on: one_in(5)
+  play 70, on: one_in(6)
+  sleep 1
+end
 #+END_SRC
+
 
 * BONUS STUFF!
 ** live_loop
