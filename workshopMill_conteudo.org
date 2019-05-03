@@ -536,7 +536,7 @@ end
 
 ** 3.1 FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
 *** 3.1.1 ~sample_duration~ and ~print~
-- Some functions don't [have a direct effect on the program(generating sound, sleeping, effecting sound), but are used to /return values/.
+- Some functions don't serve a purpose like generating sound, sleeping, but are used to /return values/.
 
 **** EXAMPLES
 #+BEGIN_SRC ruby
@@ -563,6 +563,13 @@ end
 ##|   sleep sample_duration :loop_breakbeat
 ##| end
 #+END_SRC
+
+*** TODO OTHER FUNCTIONS AND OPTS TO EXPLORE
+- ~midi_to_hz~
+- ~:c4.to_i~
+- ~scale~
+_ ~note_range~
+
 
 ** 3.2 RANDOMISATION
 *** 3.2.1 ~rrand(x, y)~
