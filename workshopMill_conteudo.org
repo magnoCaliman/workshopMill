@@ -340,7 +340,7 @@ play 74
 - ~use_sample_defaults~
 
 * 2. BLOCKS
-** 2.1 ~LOOP DO/END~
+** 2.1 ~loop do/end~
 
 - ~loop do <code> end~
 
@@ -368,7 +368,7 @@ loop do
 end
 #+END_SRC
 
-** 2.2 ~n.TIMES DO/END~
+** 2.2 ~n.times do/end~
 - ~n.times do <code> end~
 
 **** EXAMPLES
@@ -564,16 +564,19 @@ end
 ##| end
 #+END_SRC
 
-*** TODO OTHER FUNCTIONS AND OPTS TO EXPLORE
+*** OTHER FUNCTIONS AND OPTS TO EXPLORE
 - ~midi_to_hz~
 - ~:c4.to_i~
 - ~scale~
 _ ~note_range~
 
-
 ** 3.2 RANDOMISATION
-*** 3.2.1 ~rrand(x, y)~
-  - give two values, and a random number inside the /range/ will be chosen
+*** 3.2.1 ~rrand(min, max)~
+- Returns a random number inside the /range/ of the arguments
+- Non-inclusive
+- 13 decimal places of precision
+
+**** EXAMPLES
 
 #+BEGIN_SRC ruby
 print rrand(20, 30)
@@ -581,24 +584,26 @@ print rrand(20, 30)
 
 #+BEGIN_SRC ruby
 loop do
-  sample :perc_bell, rate: (rrand 0.125, 1.5)
+  sample :perc_bell, rate: rrand (-1.5, 1.5)
   sleep rrand(0.2, 2)
 end
 #+END_SRC
 
 #+BEGIN_SRC ruby
 use_synth :tb303
-use_synth_defaults release: 0.2
+use_synth_defaults release: 0.15
 
 loop do
-  play 40, cutoff: rrand(50, 90)
-  sleep 0.2
+  play 40, cutoff: rrand(50, 100)
+  sleep 0.15
 end
 #+END_SRC
 
+
 *** 3.2.2 ~.choose~
-- [].choose 
-  - give a list of itens inside [brackets], and /only/ itens from that list will be chosen
+- Give a list of itens inside [brackets], and /only/ itens from that list will be chosen.
+
+**** EXAMPLES
 
 #+BEGIN_SRC ruby
 loop do
@@ -610,7 +615,7 @@ end
 #+BEGIN_SRC ruby
 loop do
   sample [:drum_cymbal_closed, :drum_cymbal_open].choose
-  sleep [0.125, 0.25, 0.5].choose
+  sleep 0.25
 end
 #+END_SRC
 
@@ -630,7 +635,9 @@ loop do
 end
 #+END_SRC
 
+
 *** 3.2.2 ~one_in()~
+- [colocar descrição]
 
 #+BEGIN_SRC ruby
 use_synth :dsaw
@@ -646,6 +653,8 @@ loop do
 end
 #+END_SRC
 
+*** OTHER FUNCTIONS AND OPTS TO EXPLORE
+~use_random_seed~
 
 * BONUS STUFF!
 ** live_loop
