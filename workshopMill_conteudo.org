@@ -533,16 +533,35 @@ end
 
 
 * 3. MODULARITY
+
 ** 3.1 FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
-- Some functions don't [have a direct effect on the program](generating sound, sleeping, effecting sound), but are used to /return values/.
+*** 3.1.1 ~sample_duration~ and ~print~
+- Some functions don't [have a direct effect on the program(generating sound, sleeping, effecting sound), but are used to /return values/.
+
+**** EXAMPLES
+#+BEGIN_SRC ruby
+# this by itself looks like it does nothing...
+sample_duration :loop_breakbeat 
+#+END_SRC
 
 #+BEGIN_SRC ruby
-sample :loop_amen
-sleep sample_duration :loop_amen
-sample :loop_amen
+# now take a look at the log viewer
+print sample_duration :loop_brekbeat
+#+END_SRC
 
-# já que
-print(sample_duration :loop_amen)
+Code is for the computer to run, but for the programmer to read
+#+BEGIN_SRC ruby
+# ok, this works...
+loop do
+sample :loop_breakbeat
+sleep 1.9047619047619047
+end
+
+# but this is better...
+##| loop do
+##|   sample :loop_breakbeat
+##|   sleep sample_duration :loop_breakbeat
+##| end
 #+END_SRC
 
 ** 3.2 RANDOMISATION
