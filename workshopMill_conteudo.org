@@ -482,7 +482,7 @@ end
 #+END_SRC
 
 *** 2.3.2 EFFECTS
-- ~with_fx arg do <end> end~
+- ~with_fx arg do <code> end~
   - options: effect specific (with a few opts shared between many different effects)
 
 - Effects are, basically, blocks.
