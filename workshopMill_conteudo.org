@@ -1,9 +1,9 @@
 * 1. FUNCTIONS & ARGUMENTS
 ** 1.1 'ONESHOT' FUNCTIONS
 *** 1.1.1 ~play~ and ~sleep~
-- ~play arg~
+- ~play <arg>~
   - options: ~amp~ / ~attack~ / ~release~
-- ~sleep arg~
+- ~sleep <arg>~
 
 **** EXAMPLES
 #+BEGIN_SRC ruby
@@ -63,9 +63,8 @@ play 93, attack: 5, release: 10
 play 94, attack: 5, release: 5
 #+END_SRC
 
-
 *** 1.1.2 ~sample~
-- ~sample arg~
+- ~sample <arg>~
   - options: ~rate~, ~beat_stretch~
 
 **** EXAMPLES
@@ -171,7 +170,6 @@ sleep 2
 play 88, attack: 2, release: 4, amp: 0.05
 #+END_SRC
 
-
 *** TODO /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 - ~play_chord~
 - ~play_pattern~
@@ -186,7 +184,6 @@ play 88, attack: 2, release: 4, amp: 0.05
   - em outras palavras: sempre se perguntar "o que significa o valor do argumento?"
   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
 - RTFM
-
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 
@@ -341,7 +338,6 @@ play 74
 
 * 2. BLOCKS
 ** 2.1 ~loop do/end~
-
 - ~loop do <code> end~
 
 **** EXAMPLES
@@ -369,7 +365,7 @@ end
 #+END_SRC
 
 ** 2.2 ~n.times do/end~
-- ~n.times do <code> end~
+- ~<n>.times do <code> end~
 
 **** EXAMPLES
 
@@ -420,9 +416,7 @@ play 81
 play 86
 #+END_SRC
 
-
 ** 2.3 NESTING
-
 *** 2.3.1 LOOP INCEPTION
 
 #+BEGIN_SRC ruby
@@ -474,7 +468,7 @@ end
 #+END_SRC
 
 ** 2.4 EFFECTS
-- ~with_fx arg do <code> end~
+- ~with_fx <arg> do <code> end~
   - options: effect specific (with a few opts shared between many different effects)
 
 - Effects are, basically, blocks.
@@ -531,12 +525,12 @@ end
 ##| end
 #+END_SRC
 
-
 * 3. MODULARITY
-
 ** 3.1 FUNCTION AS ARGUMENT FOR OTHER FUNCTIONS
 *** 3.1.1 ~sample_duration~ and ~print~
-- Some functions don't serve a purpose like generating sound, sleeping, but are used to /return values/.
+- Some functions are not meant to generate or process sound sound, but are meant to /return values/.
+- ~sample_duration <arg>~
+- ~print <arg>~
 
 **** EXAMPLES
 #+BEGIN_SRC ruby
@@ -564,14 +558,14 @@ end
 ##| end
 #+END_SRC
 
-*** OTHER FUNCTIONS AND OPTS TO EXPLORE
+*** /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 - ~midi_to_hz~
 - ~:c4.to_i~
 - ~scale~
 _ ~note_range~
 
 ** 3.2 RANDOMISATION
-*** 3.2.1 ~rrand(min, max)~
+*** 3.2.1 ~rrand(<min>, <max>)~
 - Returns a random number inside the /range/ of the arguments
 - Non-inclusive
 - 13 decimal places of precision
@@ -598,7 +592,6 @@ loop do
   sleep 0.15
 end
 #+END_SRC
-
 
 *** 3.2.2 ~.choose~
 - Give a list of itens inside [brackets], and /only/ itens from that list will be chosen.
@@ -635,9 +628,17 @@ loop do
 end
 #+END_SRC
 
-
 *** 3.2.2 ~one_in()~
-- [colocar descrição]
+- ~one_in(<arg>)~
+- Russian roulette function.
+
+**** EXAMPLES
+
+#+BEGIN_SRC ruby
+6.times do
+  print one_in(6)
+end
+#+END_SRC
 
 #+BEGIN_SRC ruby
 use_synth :dsaw
@@ -653,7 +654,7 @@ loop do
 end
 #+END_SRC
 
-*** OTHER FUNCTIONS AND OPTS TO EXPLORE
+*** /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 ~use_random_seed~
 
 * BONUS STUFF!
