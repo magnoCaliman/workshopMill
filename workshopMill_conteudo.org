@@ -559,10 +559,9 @@ end
 #+END_SRC
 
 *** /OTHER FUNCTIONS AND OPTS TO EXPLORE/
-- ~midi_to_hz~
-- ~:c4.to_i~
-- ~scale~
-_ ~note_range~
+- ~chord~
+- ~chord_degree~
+- ~note_range~
 
 ** 3.2 RANDOMISATION
 *** 3.2.1 ~rrand(<min>, <max>)~
