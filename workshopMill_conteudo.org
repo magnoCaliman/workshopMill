@@ -482,7 +482,57 @@ end
 #+END_SRC
 
 *** 2.3.2 EFFECTS
+- ~with_fx arg do <end> end~
+  - options: effect specific (with a few opts shared between many different effects)
 
+- Effects are, basically, blocks.
+
+**** EXAMPLES
+
+#+BEGIN_SRC ruby
+use_synth_defaults release: 0.2
+
+with_fx :echo do
+  play 70
+  sleep 0.25
+  play 71
+  sleep 0.25
+  play 83
+  sleep 0.25
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+with_fx :gverb, room: 100, release: 10 do
+  sample :drum_snare_soft
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+with_fx :flanger, depth: 10 do
+  with_fx :distortion, distort: 0.9 do
+    sample :loop_amen_full, amp: 0.5
+  end
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+# what's the difference between this two versions?
+
+loop do
+  with_fx :reverb do
+    sample :drum_cymbal_pedal
+    sleep 1
+  end
+end
+
+##| with_fx :reverb do
+##|   loop do
+##|     sample :drum_cymbal_pedal
+##|     sleep 1
+##|   end
+##| end
+#+END_SRC
 
 * 3. RANDOMIZATION
 
