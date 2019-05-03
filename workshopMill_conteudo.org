@@ -549,7 +549,7 @@ sample_duration :loop_breakbeat
 print sample_duration :loop_brekbeat
 #+END_SRC
 
-Code is for the computer to run, but for the programmer to read
+Code is for the computer to run, but for the programmer to read:
 #+BEGIN_SRC ruby
 # ok, this works...
 loop do
@@ -557,7 +557,7 @@ sample :loop_breakbeat
 sleep 1.9047619047619047
 end
 
-# but this is better...
+# but the logic behind this is easier to understand...
 ##| loop do
 ##|   sample :loop_breakbeat
 ##|   sleep sample_duration :loop_breakbeat
