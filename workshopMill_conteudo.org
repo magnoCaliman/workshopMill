@@ -175,15 +175,15 @@ play 88, attack: 2, release: 4, amp: 0.05
 - ~play_pattern~
 - ~play_pattern_timed~
 
-*** TODO /CONCEITOS IMPORTANTES/
-- linguagem só entende palavras que fazem parte do seu vocabulário
-- a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
-- funções ("o que")
-- argumentos ("como")
-  - números são abstrações. só significam alguma coisa quando atribuimos um significado pra eles
-  - em outras palavras: sempre se perguntar "o que significa o valor do argumento?"
-  - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
-- RTFM
+# *** TODO /CONCEITOS IMPORTANTES/
+# - linguagem só entende palavras que fazem parte do seu vocabulário
+# - a página inteira de código é lida de uma vez, na ordem em que está escrito (a não ser que seja um comentário).
+# - funções ("o que")
+# - argumentos ("como")
+#   - números são abstrações. só significam alguma coisa quando atribuimos um significado pra eles
+#   - em outras palavras: sempre se perguntar "o que significa o valor do argumento?"
+#   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
+# - RTFM
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
 *** 1.2.1 ~use_synth~
