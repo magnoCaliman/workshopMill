@@ -710,23 +710,23 @@ end
 # loosely based on https://www.youtube.com/watch?v=VouHPeO4Gls
 
 use_bpm 100
-use_synth_defaults release: 0.2
-use_synth :fm
+use_synth :tb303
+use_synth_defaults release: 0.2, cutoff: 80, res: 0.8
 # there's a difference in putting this inside or outside the live_loop?
 
 live_loop :richardWright do
   ##| stop
-  play 52
+  play 40
   sleep 1.0/6 # why?
-  play 55
+  play 43
   sleep 1.0/6
-  play 57
+  play 45
   sleep 1.0/6
-  play 59
+  play 47
   sleep 1.0/6
-  play 62
+  play 50
   sleep 1.0/6
-  play 64
+  play 52
   sleep 1.0/6
 end
 
