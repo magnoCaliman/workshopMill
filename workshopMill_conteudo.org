@@ -564,7 +564,8 @@ end
 - ~note_range~
 
 ** 3.2 RANDOMISATION
-*** 3.2.1 ~rrand(<min>, <max>)~
+*** 3.2.1 ~rrand~
+- ~rrand(<min>, <max>)~
 - Returns a random number inside the /range/ of the arguments
 - Non-inclusive
 - 13 decimal places of precision
@@ -594,7 +595,7 @@ end
 
 *** 3.2.2 ~.choose~
 - Give a list of itens inside [brackets], and /only/ itens from that list will be chosen.
-
+- New type of syntax, using /methods/ via /dot notation/.
 **** EXAMPLES
 
 #+BEGIN_SRC ruby
@@ -629,7 +630,7 @@ end
 
 *** 3.2.2 ~one_in()~
 - ~one_in(<arg>)~
-- Russian roulette function.
+- Russian roulette function - https://www.youtube.com/watch?v=8Xjr2hnOHiM
 
 **** EXAMPLES
 
@@ -657,10 +658,10 @@ end
 ~use_random_seed~
 
 * 4. LIVE CODING!
-** 4.1 ~live_loop~
-- A special type of loop block that can be updated in real time
+** 4.1 ~live_loop do/end~
+- A special type of loop block that can be updated in real time.
 
-- ~live_loop <uniqueName> do <code> end~
+- ~live_loop <uniqueName> do <code> end~ 
 
 **** EXAMPLES
 
@@ -679,6 +680,7 @@ live_loop :overExcitedDrummer do
     sample [:drum_cymbal_closed, :drum_cymbal_open].choose
     sleep [0.5, 0.25].choose
   end
+
   8.times do
     sample :drum_cymbal_closed
     sleep 0.125
@@ -686,9 +688,9 @@ live_loop :overExcitedDrummer do
 end
 #+END_SRC
 
-** 4.2 ~sync~
+** 4.2 ~stop~
 
-** 4.3 ~stop~
+** 4.3 ~sync~
 
 #+BEGIN_SRC ruby
 live_loop :myBDLoop do
