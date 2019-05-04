@@ -652,6 +652,7 @@ end
 
 *** /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 ~use_random_seed~
+~rand_skip~
 
 * 4. LIVE CODING!
 ** 4.1 ~live_loop do/end~
