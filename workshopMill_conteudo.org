@@ -656,8 +656,39 @@ end
 *** /OTHER FUNCTIONS AND OPTS TO EXPLORE/
 ~use_random_seed~
 
-* BONUS STUFF!
-** live_loop
+* 4. LIVE CODING!
+** 4.1 ~live_loop~
+- A special type of loop block that can be updated in real time
+
+- ~live_loop <uniqueName> do <code> end~
+
+**** EXAMPLES
+
+#+BEGIN_SRC ruby
+live_loop :partyStarter do
+  sample :bd_haus
+  sleep 0.5 # without stoping the loop, change this...
+end
+#+END_SRC
+
+#+BEGIN_SRC ruby
+use_bpm 90
+
+live_loop :overExcitedDrummer do
+  8.times do
+    sample [:drum_cymbal_closed, :drum_cymbal_open].choose
+    sleep [0.5, 0.25].choose
+  end
+  8.times do
+    sample :drum_cymbal_closed
+    sleep 0.125
+  end
+end
+#+END_SRC
+
+** 4.2 ~sync~
+
+** 4.3 ~stop~
 
 #+BEGIN_SRC ruby
 live_loop :myBDLoop do
