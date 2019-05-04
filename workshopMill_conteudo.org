@@ -182,7 +182,7 @@ play 88, attack: 2, release: 4, amp: 0.05
 # - argumentos ("como")
 #   - números são abstrações. só significam alguma coisa quando atribuimos um significado pra eles
 #   - em outras palavras: sempre se perguntar "o que significa o valor do argumento?"
-#   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts (mas são só para os synths...)
+#   - nesse momento, nem todos argumentos são obrigatórios. sonic pi chama de options, ou opts
 # - RTFM
 
 ** 1.2 GLOBAL BEHAVIOUR CHANGING FUNCTIONS
