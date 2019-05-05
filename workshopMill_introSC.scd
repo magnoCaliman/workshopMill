@@ -52,18 +52,37 @@ LFPulse.ar()
 
 
 rrand(0, 10)
+[1,2,3,4,5].choose
 
 {LFSaw.ar(freq:rrand(200, 800), mul:0.2)!2}.play
 
 //englobar em parênteses, permite avaliar várias linhas ao mesmo tempo
 (
 {SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
-{SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
+{SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2	}.play;
 {SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
 {SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
 {SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
 {SinOsc.ar(freq:Line.kr(start:100, end:rrand(800, 1000), dur:10), mul:0.2)!2}.play;
 )
+
+//////////
+
+a = {SinOsc.ar(freq:rrand(300, 500), mul:0.2)}.play
+
+b = {SinOsc.ar(freq:rrand(300, 500), mul:0.2)}.play
+
+a.free
+b.free
+
+//
+
+~oscilador01 = {WhiteNoise.ar(0.2)}.play
+
+~oscilador02 = {LFSaw.ar(freq:SinOsc.ar(freq:2, mul:100, add:300), mul:0.2)}.play
+
+~oscilador01.free
+~oscilador02.free
 
 s.record
 s.stopRecording
