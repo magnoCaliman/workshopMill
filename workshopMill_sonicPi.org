@@ -360,6 +360,15 @@ loop do
 end
 #+END_SRC
 
+#+BEGIN_SRC ruby
+# Imnsoniac thread
+# Almost no sleep is definitely better than no sleep at all...
+loop do
+  play 60
+  sleep 0.02
+end
+#+END_SRC
+
 ** 2.2 ~n.times do/end~
 - ~<n>.times do <code> end~
 

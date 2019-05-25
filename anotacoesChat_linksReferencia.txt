@@ -27,14 +27,6 @@ play 67
 
 ///////
 
-loop do
-  play 60
-  sleep 0.02
-end
-# pode dormir pouco, mas tem que dormir...
-
-///////
-
 
 use_synth :tech_saws
 use_synth_defaults release: 0.1
